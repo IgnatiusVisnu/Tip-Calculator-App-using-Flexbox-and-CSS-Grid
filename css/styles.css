@@ -1,0 +1,201 @@
+body {
+    background-color: hsl(185, 41%, 84%);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;font-family: 'Space Mono', monospace;
+    font-weight: 400;
+
+}
+
+
+.row {
+    justify-content: center;
+}
+
+.entire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.splitter {
+    display: flex;
+    text-align: center;
+    width:50px;
+    align-self: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 18px;
+    letter-spacing: 0.3rem;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+}
+
+.kotak {
+    background-color: white;
+    width: 100%;
+    display:inline-flex;
+    padding:20px;
+    gap: 20px;
+    min-height: 40vh;
+    border-radius:20px;
+}
+
+.kotak > * {
+    width:50%;
+}
+
+.inputall {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputall > *{
+    margin-bottom: 10px;
+}
+
+
+.percent-buttons > label {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    font-weight: 700;
+}
+
+.outputall {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.inputall > input {
+    font-size: 30px;
+}
+
+.form-control {
+    text-align: right;
+    font-size: 24px;
+    font-weight:700;
+} 
+
+.form-control:focus {
+    box-shadow:none;
+    border-color: hsl(183, 100%, 15%);
+} 
+
+/* bikin jadi grid trus repeat(3,1fr), jadi tombol nya kyk kalkulator yg 1 row nya isi 3 button */
+
+.percent-buttons{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    border:0;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.percent-buttons > label:hover {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+
+.percent-buttons > label{
+    font-size:24px;
+}
+
+
+.custom > input{
+    font-size:24px;
+    text-align:center;
+}
+
+
+i{
+    position: absolute;
+}
+
+.icon {
+    padding: 10px 15px 15px;
+    min-width: 40px;
+}
+
+/* class numberOfPeople bikin jd flex trus space evenly, biar huruf Number Of People sama Can't be Zero kepisah ujung ke ujung */
+
+.numberOfPeople {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.people {
+    width:50%;
+}
+
+.error {
+    text-align: right;
+    color: red;
+}
+
+.error-input {
+    border-color: red;
+}
+
+
+.results > label {
+    width:35%;
+    font-size: 16px;
+}
+
+.per-person {
+    font-size: 12px;
+}
+
+.results > input{
+    background-color: hsl(183, 100%, 15%);
+    border: 0;
+    text-align: right;
+    width: 60%;
+    font-size:40px;
+    font-weight: 700;
+    color: hsl(172, 67%, 45%);
+}
+
+.resetbutton {
+    width:100%;
+    align-self: baseline;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    border:0;
+}
+
+.resetbutton:disabled {
+    background-color: hsl(186, 14%, 43%);
+    color: hsl(183, 100%, 15%);
+}
+
+.resetbutton:hover {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+@media only screen and (max-width:1028px) {
+    .entire {
+        padding:0;
+    }
+    .splitter {
+        margin-top: 40px;
+    }
+    .kotak {
+        display:block;
+    }
+    .kotak > * {
+        width:100%;
+    }
+}
+
+
